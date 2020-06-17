@@ -1,0 +1,110 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="mat-elevation-z3">
+      Angular Material Themes
+    </mat-toolbar>
+    <div class="basic-container">
+      <p>
+        <mat-slide-toggle (click)="toggleTheme()">Slide Toggle</mat-slide-toggle>
+      </p>
+      <div class="divider">
+        Hello
+      </div>
+      <mat-tab-group>
+        <mat-tab label="First">
+          <p>
+            <mat-form-field appearance="legacy">
+              <mat-label>Legacy form field</mat-label>
+              <input matInput placeholder="Placeholder">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="standard">
+              <mat-label>Standard form field</mat-label>
+              <input matInput placeholder="Placeholder">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+          </p>
+        </mat-tab>
+        <mat-tab label="Second">
+          <p>
+            <mat-form-field appearance="fill">
+              <mat-label>Fill form field</mat-label>
+              <input matInput placeholder="Placeholder">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Outline form field</mat-label>
+              <input matInput placeholder="Placeholder">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+          </p>
+        </mat-tab>
+        <mat-tab label="Third">
+          <div class="example-container">
+            <mat-form-field appearance="fill">
+              <mat-label>Input</mat-label>
+              <input matInput>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill">
+              <mat-label>Select</mat-label>
+              <mat-select>
+                <mat-option value="option">Option</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill">
+              <mat-label>Textarea</mat-label>
+              <textarea matInput></textarea>
+            </mat-form-field>
+          </div>
+        </mat-tab>
+        <mat-tab label="Forms">
+
+          <div class="example-container">
+            <form>
+              <mat-checkbox>Hide required marker</mat-checkbox>
+              <div>
+                <label>Float label: </label>
+                <mat-radio-group>
+                  <mat-radio-button value="auto">Auto</mat-radio-button>
+                  <mat-radio-button value="always">Always</mat-radio-button>
+                </mat-radio-group>
+              </div>
+
+              <mat-form-field appearance="fill">
+                <input matInput placeholder="Simple placeholder" required>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Both a label and a placeholder</mat-label>
+                <input matInput placeholder="Simple placeholder">
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-select required>
+                  <mat-option>-- None --</mat-option>
+                  <mat-option value="option">Option</mat-option>
+                </mat-select>
+                <mat-label>
+                  <mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i>
+                </mat-label>
+              </mat-form-field>
+            </form>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+
+      <span class="version-info">Current build: 0</span>
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

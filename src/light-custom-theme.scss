@@ -1,0 +1,72 @@
+@import '~@angular/material/theming';
+@import './app/app.component.scss';
+
+@include mat-core();
+
+$light-custom-theme-primary: mat-palette($mat-blue);
+$light-custom-theme-accent: mat-palette($mat-orange, A200, A100, A400);
+$light-custom-theme-warn: mat-palette($mat-red);
+$light-custom-theme: mat-light-theme($light-custom-theme-primary, $light-custom-theme-accent, $light-custom-theme-warn);
+
+$custom-default-colours: (
+  primary-background-colour: white,
+  primary-font-color: black,
+  primary-border-colour: darkgreen,
+  primary-selection-background-colour: red,
+  primary-selection-font-colour: white,
+  primary-body-background-colour: ghostwhite,
+  divider-menu-border-color: white,
+  divider-color: #d1d1d1,
+  divider-lighter-color: #F4F4F5,
+  icon-color: #adacac,
+  side-menu-background-color: slategrey,
+  side-menu-font-color: white,
+  side-menu-icon-color: white,
+  side-menu-scrollbar-thumb-color: white,
+  header-background-color: white,
+  header-font-color: black,
+  search-background-color: white,
+  footer-save-axn-background-color: white,
+  footer-background-colour: #F4F4F5,
+  page-header-background-color: cadetblue,
+  page-header-font-color: white
+);
+
+.light-theme {
+  @include angular-material-theme($light-custom-theme);
+  @include custom-components-theme($custom-default-colours);
+}
+
+$custom-theme-primary: mat-palette($mat-grey);
+$custom-theme-accent: mat-palette($mat-orange, A200, A100, A400);
+$custom-theme-warn: mat-palette($mat-red);
+$custom-theme: mat-dark-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
+
+$custom-corp-colours: (
+  primary-background-colour: white,
+  primary-font-color: black,
+  primary-border-colour: rgb(240, 2, 2),
+  primary-selection-background-colour: rgb(0, 255, 0),
+  primary-selection-font-colour: white,
+  primary-body-background-colour: ghostwhite,
+  divider-menu-border-color: white,
+  divider-color: #d1d1d1,
+  divider-lighter-color: #F4F4F5,
+  icon-color: #adacac,
+  side-menu-background-color: slategrey,
+  side-menu-font-color: white,
+  side-menu-icon-color: white,
+  side-menu-scrollbar-thumb-color: white,
+  header-background-color: white,
+  header-font-color: black,
+  search-background-color: white,
+  footer-save-axn-background-color: white,
+  footer-background-colour: #F4F4F5,
+  page-header-background-color: cadetblue,
+  page-header-font-color: white
+);
+
+.dark-theme {
+  @include angular-material-theme($custom-theme);
+  @include custom-components-theme($custom-corp-colours);
+}
