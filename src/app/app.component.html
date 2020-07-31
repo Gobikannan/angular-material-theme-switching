@@ -4,9 +4,12 @@
       Angular Material Themes
     </mat-toolbar>
     <div class="basic-container">
-      <p>
-        <mat-slide-toggle (click)="toggleTheme()">Slide Toggle</mat-slide-toggle>
-      </p>
+      <mat-form-field>
+        <mat-label>Switch Theme</mat-label>
+        <mat-select (selectionChange)="toggleTheme()" [(ngModel)]="selectedTheme">
+          <mat-option *ngFor="let availableTheme of availableThemes" value="{{availableTheme.value}}">{{availableTheme.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
       <div class="divider">
         Hello
       </div>
@@ -102,8 +105,6 @@
           </div>
         </mat-tab>
       </mat-tab-group>
-
-      <span class="version-info">Current build: 0</span>
     </div>
 
   </mat-sidenav-content>

@@ -1,0 +1,52 @@
+@import '~@angular/material/theming';
+@import './app/app.component.scss';
+
+@include mat-core();
+
+$default-custom-theme-primary: mat-palette($mat-blue);
+$default-custom-theme-accent: mat-palette($mat-orange, A200, A100, A400);
+$default-custom-theme-warn: mat-palette($mat-red);
+$default-custom-theme: mat-light-theme($default-custom-theme-primary, $default-custom-theme-accent, $default-custom-theme-warn);
+
+$custom-default-colours: (
+  primary-selection-background-colour: red,
+  primary-selection-font-colour: white,
+  icon-color: #adacac
+);
+
+.default-theme {
+  @include angular-material-theme($default-custom-theme);
+  @include custom-components-theme($custom-default-colours);
+}
+
+$custom-theme-primary: mat-palette($mat-grey);
+$custom-theme-accent: mat-palette($mat-orange, A200, A100, A400);
+$custom-theme-warn: mat-palette($mat-red);
+$custom-theme: mat-dark-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
+
+$custom-dark-colours: (
+  primary-selection-background-colour: rgb(0, 255, 0),
+  primary-selection-font-colour: rgb(59, 59, 59),
+  icon-color: #adacac
+);
+
+.dark-theme {
+  @include angular-material-theme($custom-theme);
+  @include custom-components-theme($custom-dark-colours);
+}
+
+$fancy-theme-primary: mat-palette($mat-red);
+$fancy-theme-accent: mat-palette($mat-orange, A200, A100, A400);
+$fancy-theme-warn: mat-palette($mat-red);
+$fancy-theme: mat-light-theme($fancy-theme-primary, $fancy-theme-accent, $fancy-theme-warn);
+
+$fancy-theme-colours: (
+  primary-selection-background-colour: rgb(165, 0, 206),
+  primary-selection-font-colour: rgb(197, 189, 189),
+  icon-color: #c92aae
+);
+
+.fancy-theme {
+  @include angular-material-theme($fancy-theme);
+  @include custom-components-theme($fancy-theme-colours);
+}

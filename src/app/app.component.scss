@@ -1,6 +1,7 @@
 @mixin custom-components-theme($custom-colours) {
     .divider {
       background-color: map-get($custom-colours, primary-selection-background-colour);
-    }
+      color: map-get($custom-colours, primary-selection-font-colour);
+      height: 40px;
   }
-  
+}
